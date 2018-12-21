@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
 
 <!DOCTYPE html>
 
@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="LiMuyang,LiMuyang Blog,上海建桥学院李沐阳,上海建桥学院李沐阳博客" />
     <meta name="description" content="上海建桥学院李沐阳的博客，李沐阳博客网站，本网站是李沐阳在2018-2019学年度上期ASP.NET课程大作业编写。" />
-    <link rel="stylesheet" type="text/css" href="./static/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/login.css" />
     <link rel="stylesheet" href="./static/css/material.min.css" />
     <script type="text/javascript" src="./static/js/material.min.js"></script>
-    <script type="text/javascript" src="./static/js/main.js" charset="gb2312"></script>
+    <script type="text/javascript" src="./static/js/login.js" charset="gb2312"></script>
     <script type="text/javascript" src="./static/js/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 </head>
@@ -23,7 +23,7 @@
             <header class="mdl-layout__header mdl-layout__header--transparent">
                 <div class="mdl-layout__header-row">
                     <!-- 标题 -->
-                    <span class="mdl-layout-title" id="mdl-title">LiMuyang Blog /SJQU</span>
+                    <span class="mdl-layout-title" id="mdl-title">Blog Admin /SJQU</span>
                     <!-- 右侧导航栏 -->
                     <div class="mdl-layout-spacer"></div>
                     <!-- 导航栏列表 -->
@@ -36,7 +36,7 @@
             </header>
             <!--可收缩的导航栏-->
             <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">LiMuyang Blog</span>
+                <span class="mdl-layout-title">Blog Admin</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="index.aspx">Home</a>
                     <a class="mdl-navigation__link" href="#">Blog</a>
@@ -52,23 +52,29 @@
                             <div class="mdl-layout-spacer"></div>
                             <!--左侧留作时钟及部分导航磁贴-->
                             <div class="mdl-cell mdl-cell--4-col">
-                                <h3 class="font-cell">Welcome to </h3>
+                                <h3 class="font-cell">Welcome to LiMuyang's</h3>
                                 <br/>
-                                <h1 class="font-cell">LiMuyang's Blog！</h1>
+                                <h1 class="font-cell">Blog Admin！</h1>
                             </div>
                             <!--右侧为Card式简要通知栏-->
-                            <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-cell mdl-cell--4-col" id="loginField">
                                 <div class="demo-card-wide mdl-card mdl-shadow--6dp">
                                     <div class="mdl-card__title">
-                                        <h3 class="mdl-card__title-text">The latest article by Li Muyang </h3>
+                                        <h3 class="mdl-card__title-text">登陆后台系统</h3>
                                     </div>
-                                    <div class="mdl-card__supporting-text" runat="server" id="latestArticle">
-                                        <%=getLatestArticle()%>
+                                    <div class="mdl-card__supporting-text" id="passwordField">
+
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" runat="server" type="text" id="username" />
+                                            <label class="mdl-textfield__label" for="sample1">用户名</label>
+                                        </div>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" runat="server" type="password" id="password" />
+                                            <label class="mdl-textfield__label" for="sample1">密码</label>
+                                        </div>
                                     </div>
                                     <div class="mdl-card__actions mdl-card--border">
-                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                                            id="welcome-button" onclick="javascript:alert('<%=articleUrl()%>')">Open this article！
-                                        </a>
+                                        <asp:Button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" runat="server" onclick="loginAdmin" Text="登录"/>
                                     </div>
                                 </div>
                             </div>
@@ -94,6 +100,8 @@
             </footer>
         </div>
         <script>
+            function login() {
+            }
         </script>
     </form>
 </body>
