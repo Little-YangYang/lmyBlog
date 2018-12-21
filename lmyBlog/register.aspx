@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="register.aspx.cs" Inherits="register" %>
 
 <!DOCTYPE html>
 
@@ -54,13 +54,13 @@
                             <div class="mdl-cell mdl-cell--4-col">
                                 <h3 class="font-cell">Welcome to LiMuyang's</h3>
                                 <br/>
-                                <h1 class="font-cell">Blog Admin！</h1>
+                                <h1 class="font-cell">New Friend!</h1>
                             </div>
                             <!--右侧为Card式简要通知栏-->
                             <div class="mdl-cell mdl-cell--4-col" id="loginField">
                                 <div class="demo-card-wide mdl-card mdl-shadow--6dp">
                                     <div class="mdl-card__title">
-                                        <h3 class="mdl-card__title-text">登陆后台系统</h3>
+                                        <h3 class="mdl-card__title-text">注册新用户</h3>
                                     </div>
                                     <div class="mdl-card__supporting-text" id="passwordField">
 
@@ -74,8 +74,7 @@
                                         </div>
                                     </div>
                                     <div class="mdl-card__actions mdl-card--border">
-                                        <asp:Button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" runat="server" onclick="loginAdmin" Text="登录"/>
-                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" runat="server" href="register.aspx" >注册</a>
+                                        <asp:Button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" runat="server" onclick="userRegister" Text="注册"/>
                                     </div>
                                 </div>
                             </div>

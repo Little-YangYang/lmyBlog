@@ -5,3 +5,9 @@
 .mdl-layout__tab-bar {
     background-color: rgb(115, 88, 97) !important;
 }
+.page-content{
+    margin-top:10px;
+    margin-left:20px;
+    margin-right:20px;
+    padding-top:10px;
+}

@@ -38,12 +38,24 @@ public partial class login : System.Web.UI.Page
                     Guid token;
                     token = Guid.NewGuid();
                     Application[user] = token.ToString();
+                    Application[user + "_permission"] = permission;
                     Session["username"] = user;
                     Session["loginTime"] = DateTime.Now;
                     Session["token"] = token.ToString();
                     Response.Write("<script>console.log('登录成功,在线token是"+Application[user]+",token是"+token.ToString()+"，Session的token是"+Session["token"]+"')</script>");
                     
                     Response.Redirect("./admin/admin.aspx");
+                }
+                else if (permission >= 100)
+                {
+                    Guid token;
+                    token = Guid.NewGuid();
+                    Application[user] = token.ToString();
+                    Application[user + "_permission"] = permission;
+                    Session["username"] = user;
+                    Session["loginTime"] = DateTime.Now;
+                    Session["token"] = token.ToString();
+                    Response.Write("<script>console.log('登录成功,在线token是" + Application[user] + ",token是" + token.ToString() + "，Session的token是" + Session["token"] + ",权限是"+Application[user+"_permission"]+"')</script>");
                 }
                 else
                 {

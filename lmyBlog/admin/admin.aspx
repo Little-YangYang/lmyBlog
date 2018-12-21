@@ -43,8 +43,14 @@
             <main class="mdl-layout__content">
                 <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
                     <div class="page-content">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" runat="server" type="text" id="articleTitle" />
+                            <label class="mdl-textfield__label" for="articleTitle">Article Title</label>
+                        </div>
+
                         <div id="editor">
                         </div>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" id="articlePublic">发布</a>
                     </div>
                 </section>
                 <section class="mdl-layout__tab-panel" id="scroll-tab-2">
@@ -75,9 +81,28 @@
             </main>
         </div>
         <script>
-            var E = window.wangEditor
-            var editor = new E('#editor')
-            editor.create()
+            var E = window.wangEditor;
+            var editor = new E('#editor');
+            editor.create();
+
+
+            document.getElementById("articlePublic").addEventListener('click', function () {
+                var title = document.getElementById('articleTitle').value;
+
+                $.ajax({
+                    type: "GET",
+                    url: "./publicArticle.aspx",
+                    data: {
+                        title: title,
+                        body: editor.txt.html()
+                    },
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function () {
+                        alert("成功！");
+                    }
+                })
+            });
         </script>
     </form>
 </body>

@@ -21,7 +21,7 @@ public partial class index : System.Web.UI.Page
     {
         using (SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = lmyBlog; Integrated Security = True"))
         {
-            using (SqlCommand cmd = new SqlCommand("select top 1 pid from page", conn))
+            using (SqlCommand cmd = new SqlCommand("select top 1 pid from page order by pid DESC", conn))
             {
                 conn.Open();
                 string pid = cmd.ExecuteScalar().ToString();
@@ -42,7 +42,7 @@ public partial class index : System.Web.UI.Page
     {
         using (SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = lmyBlog; Integrated Security = True"))
         {
-            using (SqlCommand cmd = new SqlCommand("select top 1 title from page", conn))
+            using (SqlCommand cmd = new SqlCommand("select top 1 title from page order by pid DESC", conn))
             {
                 conn.Open();
                 string article = cmd.ExecuteScalar().ToString();
