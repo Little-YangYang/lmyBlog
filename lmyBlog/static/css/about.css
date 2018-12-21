@@ -1,0 +1,7 @@
+
+.demo-layout-transparent {
+    background: url("../img/star.jpg") center / cover;
+}
+#mdl-title {
+    font-family: 'Share Tech Mono', cursive;
+}
