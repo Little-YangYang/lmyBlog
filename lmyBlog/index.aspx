@@ -29,7 +29,7 @@
                     <!-- 导航栏列表 -->
                     <nav class="mdl-navigation">
                         <a class="mdl-navigation__link" href="index.aspx">Home</a>
-                        <a class="mdl-navigation__link" href="#">Blog</a>
+                        <a class="mdl-navigation__link" href="blog.aspx">Blog</a>
                         <a class="mdl-navigation__link" href="login.aspx">Login</a>
                     </nav>
                 </div>
@@ -39,7 +39,7 @@
                 <span class="mdl-layout-title">LiMuyang Blog</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="index.aspx">Home</a>
-                    <a class="mdl-navigation__link" href="#">Blog</a>
+                    <a class="mdl-navigation__link" href="blog.aspx">Blog</a>
                     <a class="mdl-navigation__link" href="login.aspx">Login</a>
                 </nav>
             </div>

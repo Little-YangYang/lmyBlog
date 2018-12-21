@@ -1,0 +1,7 @@
+﻿User-agent: Baiduspider
+Disallow: /
+User-agent: *
+Disallow: 
+Disallow: /bin/
+Disallow: /admin/
+Disallow: /static/

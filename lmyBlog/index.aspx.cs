@@ -12,6 +12,11 @@ public partial class index : System.Web.UI.Page
     {
         
     }
+
+    /**
+     * 获取最新的文章PID
+     * @return 最新文章的PID
+     **/
     public string articleUrl()
     {
         using (SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = lmyBlog; Integrated Security = True"))
@@ -19,7 +24,7 @@ public partial class index : System.Web.UI.Page
             using (SqlCommand cmd = new SqlCommand("select top 1 pid from page", conn))
             {
                 conn.Open();
-                string pid = cmd.ExecuteScalar().ToString();  //Object转换成int
+                string pid = cmd.ExecuteScalar().ToString();
                 conn.Close();
                 if (pid != "")
                     return pid;
@@ -28,6 +33,11 @@ public partial class index : System.Web.UI.Page
             }
         }
     }
+
+    /**
+     * 获取最新文章的标题
+     * @return 最新文章的标题
+     **/
     public string getLatestArticle()
     {
         using (SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = lmyBlog; Integrated Security = True"))
@@ -35,7 +45,7 @@ public partial class index : System.Web.UI.Page
             using (SqlCommand cmd = new SqlCommand("select top 1 title from page", conn))
             {
                 conn.Open();
-                string article = cmd.ExecuteScalar().ToString();  //Object转换成int
+                string article = cmd.ExecuteScalar().ToString();
                 conn.Close();
                 if (article!="")
                     return article;

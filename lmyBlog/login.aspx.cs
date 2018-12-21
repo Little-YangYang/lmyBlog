@@ -40,11 +40,10 @@ public partial class login : System.Web.UI.Page
                     Application[user] = token.ToString();
                     Session["username"] = user;
                     Session["loginTime"] = DateTime.Now;
-                    Session["token"] = token;
-                    Response.Write("<script>alert('登录成功,在线token是"+Application[user]+",token是"+token.ToString()+"')</script>");
-
-                    //todo 到后台页面
-                    Response.Redirect("");
+                    Session["token"] = token.ToString();
+                    Response.Write("<script>console.log('登录成功,在线token是"+Application[user]+",token是"+token.ToString()+"，Session的token是"+Session["token"]+"')</script>");
+                    
+                    Response.Redirect("./admin/admin.aspx");
                 }
                 else
                 {
