@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="mdl-card__actions mdl-card--border">
                                         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                                            id="welcome-button" onclick="javascript:alert('<%=articleUrl()%>')">Open this article！
+                                            id="welcome-button" onclick="javascript:window.location.href='page.aspx?page=<%=articleUrl()%>'">Open this article！
                                         </a>
                                     </div>
                                 </div>

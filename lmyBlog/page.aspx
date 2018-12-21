@@ -1,11 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="blog.aspx.cs" Inherits="blog"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="page.aspx.cs" Inherits="page" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
     <title>Blog @Blog for LiMuyang -SJQU</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="LiMuyang,LiMuyang Blog,上海建桥学院李沐阳,上海建桥学院李沐阳博客" />
@@ -52,7 +51,16 @@
                             <div class="mdl-layout-spacer"></div>
                             <!--居中的博客列表-->
                             <div class="mdl-cell mdl-cell--8-col">
-                                <%=getBlogs() %>
+                                <div class="demo-card-wide mdl-card mdl-shadow--6dp" onclick="javascript:toPage(1);">
+                                    <div class="mdl-card__title">
+                                        <h3 class="mdl-card__title-text"><%# title %></h3>
+                                        <br />
+                                        <h3 class="mdl-card__title-text">作者：<%# author %>，发布日期：<%#date %></h3>
+                                    </div>
+                                    <div class="mdl-card__supporting-text" runat="server" id="latestArticle">
+                                        <%#body %>
+                                    </div>
+                                </div>
                             </div>
                             <div class="mdl-cell mdl-cell--3-col">
                             </div>
@@ -77,11 +85,6 @@
                 </div>
             </footer>
         </div>
-        <script>
-            function toPage(page) {
-                window.location.href="page.aspx?page=" + page;
-            }
-</script>
     </form>
 </body>
 </html>

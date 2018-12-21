@@ -29,12 +29,10 @@
                 </div>
                 <!-- Tabs -->
                 <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                    <a href="#scroll-tab-1" class="mdl-layout__tab is-active">New Blog</a>
-                    <a href="#scroll-tab-2" class="mdl-layout__tab"></a>
-                    <a href="#scroll-tab-3" class="mdl-layout__tab">Tab 3</a>
-                    <a href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
-                    <a href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
-                    <a href="#scroll-tab-6" class="mdl-layout__tab">Tab 6</a>
+                    <a href="#scroll-tab-1" class="mdl-layout__tab is-active">新 文 章</a>
+                    <a href="#scroll-tab-2" class="mdl-layout__tab">管理文章</a>
+                    <a href="#scroll-tab-3" class="mdl-layout__tab">查看用户</a>
+                    <a href="#scroll-tab-4" class="mdl-layout__tab">查看评论</a>
                 </div>
             </header>
             <div class="mdl-layout__drawer">
@@ -64,16 +62,6 @@
                     </div>
                 </section>
                 <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-                    <div class="page-content">
-                        <!-- Your content goes here -->
-                    </div>
-                </section>
-                <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-                    <div class="page-content">
-                        <!-- Your content goes here -->
-                    </div>
-                </section>
-                <section class="mdl-layout__tab-panel" id="scroll-tab-6">
                     <div class="page-content">
                         <!-- Your content goes here -->
                     </div>

@@ -35,7 +35,6 @@
 
 .demo-card-wide > .mdl-card__title {
     color: #fff;
-    height: 130px;
     background: inherit;
 }
 
@@ -44,13 +43,13 @@
 }
 
 .demo-card-wide > .mdl-card__supporting-text {
-    color: #f7ffee;
+    color: #222121;
     font-family: 'Lemonada', 'Helvetica', 'Arial', sans-serif;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    /*-webkit-box-orient: vertical;*/
 }
 
 .demo-card-wide > .mdl-card__menu {
