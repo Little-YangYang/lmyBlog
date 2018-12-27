@@ -1,4 +1,5 @@
 ﻿# lmyBlog
 - 本项目为上海建桥学院ASP.NET课程期末大作业
-- 作者：李沐阳
-- Copyright 2018-2019 李沐阳 all rights reserved
+- No Copyright
+
+> 由于这个作业是压着死线写的，所以就按照作业最低要求，总共就用了一个下午写的。有很多功能都还没做，还请见谅！
